@@ -1,7 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Manrope, Orbitron } from "next/font/google"
-import localFont from "next/font/local"
+import { Manrope, Orbitron, Poppins, Dosis } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
@@ -16,16 +15,16 @@ const orbitron = Orbitron({
   weight: ["400", "500", "600", "700", "800", "900"],
 })
 
-const calSans = localFont({
-  src: "./fonts/CalSans-SemiBold.woff2",
+const calSans = Poppins({
+  subsets: ["latin"],
   variable: "--font-cal-sans",
-  display: "swap",
+  weight: ["600", "700"],
 })
 
-const instrumentSans = localFont({
-  src: "./fonts/InstrumentSans-Variable.woff2",
+const instrumentSans = Dosis({
+  subsets: ["latin"],
   variable: "--font-instrument-sans",
-  display: "swap",
+  weight: ["400", "500", "600", "700"],
 })
 
 export const metadata: Metadata = {

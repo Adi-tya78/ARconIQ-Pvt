@@ -76,8 +76,8 @@
 
 @theme inline {
   --font-sans: "Manrope", "Manrope Fallback", sans-serif;
-  --font-display: "Cal Sans", "Cal Sans Fallback", sans-serif;
-  --font-heading: "Instrument Sans", "Instrument Sans Fallback", sans-serif;
+  --font-display: "Manrope", "Manrope Fallback", sans-serif;
+  --font-heading: "Manrope", "Manrope Fallback", sans-serif;
   /* Added Orbitron font for tech/robotic brand styling */
   --font-orbitron: "Orbitron", "Orbitron Fallback", monospace;
   --color-background: var(--background);

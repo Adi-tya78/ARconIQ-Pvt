@@ -27,7 +27,7 @@ const teamMembers = [
     bio: "Raash holds a Master's degree in Commerce (M.Com) and brings a deep understanding of core financial concepts and strategic financial planning to ARconIQ. His expertise in financial management, budgeting, and fiscal strategy ensures that every client engagement is backed by sound financial principles. As CFO, he oversees the financial health of both ARconIQ and the financial consulting services offered to clients.",
     expertise: ["Financial Strategy", "Corporate Finance", "Budget Management", "Financial Analysis"],
     education: "M.Com (Masters in Commerce)",
-    image: "/professional-indian-man-headshot-business.jpg",
+    image: "/raash-gupta-headshot.png",
     color: "blue",
   },
   {

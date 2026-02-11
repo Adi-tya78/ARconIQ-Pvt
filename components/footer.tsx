@@ -45,20 +45,52 @@ export function Footer() {
           </div>
 
           {/* Links */}
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
-              <h4 className="text-sm font-semibold text-white mb-4">{title}</h4>
-              <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors">
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">Services</h4>
+            <ul className="space-y-3">
+              {footerLinks.Services.map((link) => (
+                <li key={link}>
+                  <a href="#" className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors">
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">Company</h4>
+            <ul className="space-y-3">
+              {footerLinks.Company.map((link) => (
+                <li key={link}>
+                  <a href="#" className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors">
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">Legal</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/legal/privacy-policy" className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/legal/terms-of-service" className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors">
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link href="/legal/cookie-policy" className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors">
+                  Cookie Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
         </motion.div>
 
         {/* Bottom */}

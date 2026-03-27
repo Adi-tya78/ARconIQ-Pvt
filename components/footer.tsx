@@ -49,13 +49,20 @@ export function Footer() {
             <div key={title}>
               <h4 className="text-sm font-semibold text-white mb-4">{title}</h4>
               <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors">
-                      {link}
-                    </a>
-                  </li>
-                ))}
+                {links.map((link) => {
+                  let href = "#"
+                  if (link === "Blog") href = "/blog"
+                  else if (link === "About Us") href = "/about"
+                  else if (link === "Contact") href = "#contact"
+                  
+                  return (
+                    <li key={link}>
+                      <a href={href} className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors">
+                        {link}
+                      </a>
+                    </li>
+                  )
+                })}
               </ul>
             </div>
           ))}

@@ -10,6 +10,7 @@ import { BrandName } from "@/components/brand-name"
 
 const navItems = [
   { label: "Services", href: "#services" },
+  { label: "Blog", href: "/blog" },
   { label: "Clients", href: "#clients" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "#contact" },

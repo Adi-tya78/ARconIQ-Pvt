@@ -72,7 +72,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} <BrandName size="sm" /> Solutions Pvt Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors">
+            <a href="https://www.linkedin.com/company/arconiq-solutions-pvt-ltd/" className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
             <a href="#" className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors">

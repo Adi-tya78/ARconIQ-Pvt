@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef, useEffect, useState } from "react"
+import Link from "next/link"
 import { Brain, Headphones, Database, Shield, MessageSquare, BarChart3 } from "lucide-react"
 
 const containerVariants = {
@@ -138,116 +139,134 @@ export function BentoGrid() {
         >
           <motion.div
             variants={itemVariants}
-            className="md:col-span-2 group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-cyan-500/50 hover:scale-[1.02] transition-all duration-300 overflow-hidden"
+            className="md:col-span-2 group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-cyan-500/50 hover:scale-[1.02] transition-all duration-300 overflow-hidden cursor-pointer"
+            asChild
           >
-            <div className="flex items-start justify-between mb-6">
-              <div>
-                <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-fit mb-4">
-                  <Brain className="w-5 h-5 text-cyan-400" strokeWidth={1.5} />
+            <Link href="/services/ai-model-training">
+              <div className="flex items-start justify-between mb-6">
+                <div>
+                  <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-fit mb-4">
+                    <Brain className="w-5 h-5 text-cyan-400" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">AI Model Training</h3>
+                  <p className="text-zinc-400 text-sm">
+                    Expert training and fine-tuning of AI models for your specific use cases. We handle data preparation,
+                    model selection, and continuous optimization.
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">AI Model Training</h3>
-                <p className="text-zinc-400 text-sm">
-                  Expert training and fine-tuning of AI models for your specific use cases. We handle data preparation,
-                  model selection, and continuous optimization.
-                </p>
               </div>
-            </div>
-            <AIModelAnimation />
-            <div className="grid grid-cols-3 gap-4 mt-6">
-              {["Custom Models", "Fine-tuning", "Deployment"].map((item) => (
-                <div key={item} className="text-center p-3 rounded-lg bg-zinc-800/50">
-                  <div className="text-sm font-medium text-zinc-300">{item}</div>
-                </div>
-              ))}
-            </div>
+              <AIModelAnimation />
+              <div className="grid grid-cols-3 gap-4 mt-6">
+                {["Custom Models", "Fine-tuning", "Deployment"].map((item) => (
+                  <div key={item} className="text-center p-3 rounded-lg bg-zinc-800/50">
+                    <div className="text-sm font-medium text-zinc-300">{item}</div>
+                  </div>
+                ))}
+              </div>
+            </Link>
           </motion.div>
 
           <motion.div
             variants={itemVariants}
-            className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-cyan-500/50 hover:scale-[1.02] transition-all duration-300"
+            className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-cyan-500/50 hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+            asChild
           >
-            <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-fit mb-4">
-              <Headphones className="w-5 h-5 text-cyan-400" strokeWidth={1.5} />
-            </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Customer Support</h3>
-            <p className="text-zinc-400 text-sm mb-4">
-              Professional email and chat support services that keep your customers happy.
-            </p>
-            <SupportAnimation />
+            <Link href="/services/customer-support">
+              <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-fit mb-4">
+                <Headphones className="w-5 h-5 text-cyan-400" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Customer Support</h3>
+              <p className="text-zinc-400 text-sm mb-4">
+                Professional email and chat support services that keep your customers happy.
+              </p>
+              <SupportAnimation />
+            </Link>
           </motion.div>
 
           <motion.div
             variants={itemVariants}
-            className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-cyan-500/50 hover:scale-[1.02] transition-all duration-300"
+            className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-cyan-500/50 hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+            asChild
           >
-            <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-fit mb-4">
-              <Database className="w-5 h-5 text-cyan-400" strokeWidth={1.5} />
-            </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Data Handling</h3>
-            <p className="text-zinc-400 text-sm mb-4">
-              Secure data processing, organization, and management solutions.
-            </p>
-            <DataFlowAnimation />
+            <Link href="/services/data-handling">
+              <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-fit mb-4">
+                <Database className="w-5 h-5 text-cyan-400" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Data Handling</h3>
+              <p className="text-zinc-400 text-sm mb-4">
+                Secure data processing, organization, and management solutions.
+              </p>
+              <DataFlowAnimation />
+            </Link>
           </motion.div>
 
           <motion.div
             variants={itemVariants}
-            className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-cyan-500/50 hover:scale-[1.02] transition-all duration-300"
+            className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-cyan-500/50 hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+            asChild
           >
-            <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-fit mb-4">
-              <Shield className="w-5 h-5 text-cyan-400" strokeWidth={1.5} />
-            </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Content Moderation</h3>
-            <p className="text-zinc-400 text-sm mb-4">
-              Keep your platform safe with expert content review and moderation.
-            </p>
-            <div className="flex items-center gap-2">
-              <span className="px-2 py-1 text-xs bg-cyan-500/10 border border-cyan-500/30 rounded text-cyan-400">
-                24/7
-              </span>
-              <span className="px-2 py-1 text-xs bg-cyan-500/10 border border-cyan-500/30 rounded text-cyan-400">
-                AI + Human
-              </span>
-              <span className="px-2 py-1 text-xs bg-cyan-500/10 border border-cyan-500/30 rounded text-cyan-400">
-                Scalable
-              </span>
-            </div>
+            <Link href="/services/content-moderation">
+              <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-fit mb-4">
+                <Shield className="w-5 h-5 text-cyan-400" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Content Moderation</h3>
+              <p className="text-zinc-400 text-sm mb-4">
+                Keep your platform safe with expert content review and moderation.
+              </p>
+              <div className="flex items-center gap-2">
+                <span className="px-2 py-1 text-xs bg-cyan-500/10 border border-cyan-500/30 rounded text-cyan-400">
+                  24/7
+                </span>
+                <span className="px-2 py-1 text-xs bg-cyan-500/10 border border-cyan-500/30 rounded text-cyan-400">
+                  AI + Human
+                </span>
+                <span className="px-2 py-1 text-xs bg-cyan-500/10 border border-cyan-500/30 rounded text-cyan-400">
+                  Scalable
+                </span>
+              </div>
+            </Link>
           </motion.div>
 
           <motion.div
             variants={itemVariants}
-            className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-cyan-500/50 hover:scale-[1.02] transition-all duration-300"
+            className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-cyan-500/50 hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+            asChild
           >
-            <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-fit mb-4">
-              <MessageSquare className="w-5 h-5 text-cyan-400" strokeWidth={1.5} />
-            </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Email Management</h3>
-            <p className="text-zinc-400 text-sm mb-4">
-              Professional email response and inbox management for your business.
-            </p>
-            <div className="flex items-center gap-2 text-cyan-400 text-sm">
-              <span className="font-mono">{"<"}2hr</span>
-              <span className="text-zinc-500">avg response time</span>
-            </div>
+            <Link href="/services/email-management">
+              <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-fit mb-4">
+                <MessageSquare className="w-5 h-5 text-cyan-400" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Email Management</h3>
+              <p className="text-zinc-400 text-sm mb-4">
+                Professional email response and inbox management for your business.
+              </p>
+              <div className="flex items-center gap-2 text-cyan-400 text-sm">
+                <span className="font-mono">{"<"}2hr</span>
+                <span className="text-zinc-500">avg response time</span>
+              </div>
+            </Link>
           </motion.div>
 
           <motion.div
             variants={itemVariants}
-            className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-cyan-500/50 hover:scale-[1.02] transition-all duration-300"
+            className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-cyan-500/50 hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+            asChild
           >
-            <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-fit mb-4">
-              <BarChart3 className="w-5 h-5 text-cyan-400" strokeWidth={1.5} />
-            </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Business Projects</h3>
-            <p className="text-zinc-400 text-sm mb-4">Custom solutions for any business challenge you face.</p>
-            <div className="flex items-center gap-2">
-              <span className="px-2 py-1 text-xs bg-cyan-500/10 border border-cyan-500/30 rounded text-cyan-400">
-                Custom
-              </span>
-              <span className="px-2 py-1 text-xs bg-cyan-500/10 border border-cyan-500/30 rounded text-cyan-400">
-                Flexible
-              </span>
-            </div>
+            <Link href="/services/business-projects">
+              <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-fit mb-4">
+                <BarChart3 className="w-5 h-5 text-cyan-400" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Business Projects</h3>
+              <p className="text-zinc-400 text-sm mb-4">Custom solutions for any business challenge you face.</p>
+              <div className="flex items-center gap-2">
+                <span className="px-2 py-1 text-xs bg-cyan-500/10 border border-cyan-500/30 rounded text-cyan-400">
+                  Custom
+                </span>
+                <span className="px-2 py-1 text-xs bg-cyan-500/10 border border-cyan-500/30 rounded text-cyan-400">
+                  Flexible
+                </span>
+              </div>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

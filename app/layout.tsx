@@ -31,7 +31,12 @@ export const metadata: Metadata = {
   title: "ARconIQ - AI & Business Process Consultancy",
   description:
     "Expert consultancy services in AI model training, customer support, data handling, and content moderation. Founded by Aditya Yadav and Raash Gupta.",
-    generator: 'v0.app'
+  generator: "v0.app",
+  icons: {
+    icon: "/arconiq-favicon.png",
+    shortcut: "/arconiq-favicon.png",
+    apple: "/arconiq-favicon.png",
+  },
 }
 
 export default function RootLayout({

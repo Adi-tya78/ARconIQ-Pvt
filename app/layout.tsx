@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Manrope, Orbitron } from "next/font/google"
+import { Manrope, Orbitron, Poppins, Dosis } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
@@ -15,9 +15,17 @@ const orbitron = Orbitron({
   weight: ["400", "500", "600", "700", "800", "900"],
 })
 
-// Declare calSans and instrumentSans variables
-const calSans = { variable: "--font-calsans" };
-const instrumentSans = { variable: "--font-instrumentsans" };
+const calSans = Poppins({
+  subsets: ["latin"],
+  variable: "--font-cal-sans",
+  weight: ["600", "700"],
+})
+
+const instrumentSans = Dosis({
+  subsets: ["latin"],
+  variable: "--font-instrument-sans",
+  weight: ["400", "500", "600", "700"],
+})
 
 export const metadata: Metadata = {
   title: "ARconIQ - AI & Business Process Consultancy",

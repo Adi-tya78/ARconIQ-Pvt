@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     "Expert consultancy services in AI model training, customer support, data handling, and content moderation. Founded by Aditya Yadav and Raash Gupta.",
   generator: "v0.app",
   icons: {
-    icon: "/arconiq-favicon.png",
-    shortcut: "/arconiq-favicon.png",
-    apple: "/arconiq-favicon.png",
+    icon: "/arconiq-logo-icon.png",
+    shortcut: "/arconiq-logo-icon.png",
+    apple: "/arconiq-logo-icon.png",
   },
 }
 

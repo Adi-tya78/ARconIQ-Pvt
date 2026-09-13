@@ -39,8 +39,16 @@ export function Footer() {
               Expert consultancy in AI, customer support, and business operations.
             </p>
             <div className="text-xs text-zinc-600 space-y-1">
-              <p>Aditya Yadav — CEO & Co-Founder</p>
-              <p>Raash Gupta — CFO & Co-Founder</p>
+              <p>
+                <a href="https://linkedin.com/in/itselfadii" target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition-colors">
+                  Aditya Yadav
+                </a>{" "}— CEO & Co-Founder
+              </p>
+              <p>
+                <a href="https://linkedin.com/in/raash-gupta-207016262" target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition-colors">
+                  Raash Gupta
+                </a>{" "}— CFO & Co-Founder
+              </p>
             </div>
           </div>
 

@@ -8,8 +8,8 @@ import Image from "next/image"
 import { BrandName } from "@/components/brand-name"
 
 const founders = [
-  { name: "Aditya Yadav", role: "CEO & Co-Founder" },
-  { name: "Raash Gupta", role: "CFO & Co-Founder" },
+  { name: "Aditya Yadav", role: "CEO & Co-Founder", linkedin: "https://linkedin.com/in/itselfadii" },
+  { name: "Raash Gupta", role: "CFO & Co-Founder", linkedin: "https://linkedin.com/in/raash-gupta-207016262" },
 ]
 
 export function Hero() {
@@ -129,7 +129,14 @@ export function Hero() {
                   <span className="text-white font-bold text-sm">{founder.name[0]}</span>
                 </div>
                 <div className="text-left hidden sm:block">
-                  <p className="text-sm text-zinc-300 font-medium">{founder.name}</p>
+                  <a
+                    href={founder.linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm text-zinc-300 font-medium hover:text-cyan-400 transition-colors"
+                  >
+                    {founder.name}
+                  </a>
                   <p className="text-xs text-zinc-500">{founder.role}</p>
                 </div>
               </motion.div>

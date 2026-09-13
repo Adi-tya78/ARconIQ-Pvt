@@ -115,7 +115,7 @@ export function Footer() {
             <a href="#" className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors">
               Twitter
             </a>
-            <a href="mailto:hello@arconiq.com" className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors">
+            <a href="mailto:founders@arconiqs.co.in" className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors">
               Email
             </a>
           </div>

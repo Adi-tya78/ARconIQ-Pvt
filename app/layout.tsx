@@ -27,10 +27,60 @@ const instrumentSans = Dosis({
   weight: ["400", "500", "600", "700"],
 })
 
+const siteUrl = "https://arconiqs.co.in"
+const siteName = "ARconIQ Solutions Pvt Ltd"
+
 export const metadata: Metadata = {
-  title: "ARconIQ - AI & Business Process Consultancy",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "ARconIQ Solutions | AI & Business Process Consultancy",
+    template: "%s | ARconIQ Solutions",
+  },
   description:
-    "Expert consultancy services in AI model training, customer support, data handling, and content moderation. Founded by Aditya Yadav and Raash Gupta.",
+    "ARconIQ Solutions Pvt Ltd delivers AI model training, customer support, data handling, content moderation, and business process consultancy. Founded by Aditya Yadav and Raash Gupta.",
+  keywords: [
+    "ARconIQ Solutions",
+    "ARconIQS",
+    "ARconIQ",
+    "Aditya Yadav ARconIQS",
+    "Raash Gupta ARconIQS",
+    "AI consultancy",
+    "business process consultancy",
+  ],
+  authors: [
+    { name: "Aditya Yadav", url: siteUrl },
+    { name: "Raash Gupta", url: siteUrl },
+  ],
+  creator: siteName,
+  publisher: siteName,
+  alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName,
+    title: "ARconIQ Solutions | AI & Business Process Consultancy",
+    description:
+      "AI and business process consultancy founded by Aditya Yadav and Raash Gupta.",
+    images: [{ url: "/arconiq-logo-icon.png", alt: "ARconIQ Solutions logo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ARconIQ Solutions | AI & Business Process Consultancy",
+    description:
+      "AI and business process consultancy founded by Aditya Yadav and Raash Gupta.",
+    images: ["/arconiq-logo-icon.png"],
+  },
   generator: "v0.app",
   icons: {
     icon: "/arconiq-logo-icon.png",
@@ -51,6 +101,39 @@ export default function RootLayout({
       >
         <div className="noise-overlay" aria-hidden="true" />
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": `${siteUrl}/#organization`,
+                  name: siteName,
+                  alternateName: ["ARconIQS", "ARconIQ Solutions"],
+                  url: siteUrl,
+                  logo: `${siteUrl}/arconiq-logo-icon.png`,
+                  founder: [
+                    { "@type": "Person", name: "Aditya Yadav" },
+                    { "@type": "Person", name: "Raash Gupta" },
+                  ],
+                  sameAs: [
+                    "https://www.linkedin.com/company/arconiq-solutions-pvt-ltd/",
+                  ],
+                  email: "mailto:founders@arconiqs.co.in",
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": `${siteUrl}/#website`,
+                  name: siteName,
+                  url: siteUrl,
+                  publisher: { "@id": `${siteUrl}/#organization` },
+                },
+              ],
+            }),
+          }}
+        />
         <Analytics />
       </body>
     </html>

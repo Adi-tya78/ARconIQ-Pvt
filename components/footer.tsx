@@ -120,8 +120,13 @@ export function Footer() {
             >
               LinkedIn
             </a>
-            <a href="#" className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors">
-              Twitter
+            <a
+              href="https://instagram.com/arconiqs"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors"
+            >
+              Instagram
             </a>
             <a href="mailto:founders@arconiqs.co.in" className="text-sm text-zinc-500 hover:text-cyan-400 transition-colors">
               Email

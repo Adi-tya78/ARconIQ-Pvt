@@ -72,20 +72,20 @@ export const metadata: Metadata = {
     title: "ARconIQ Solutions | AI & Business Process Consultancy",
     description:
       "AI and business process consultancy founded by Aditya Yadav and Raash Gupta.",
-    images: [{ url: "/arconiq-logo-icon.png", alt: "ARconIQ Solutions logo" }],
+    images: [{ url: "/arconiq-favicon.png", alt: "ARconIQ Solutions logo" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ARconIQ Solutions | AI & Business Process Consultancy",
     description:
       "AI and business process consultancy founded by Aditya Yadav and Raash Gupta.",
-    images: ["/arconiq-logo-icon.png"],
+    images: ["/arconiq-favicon.png"],
   },
   generator: "v0.app",
   icons: {
-    icon: "/arconiq-logo-icon.png",
-    shortcut: "/arconiq-logo-icon.png",
-    apple: "/arconiq-logo-icon.png",
+    icon: "/arconiq-favicon.png",
+    shortcut: "/arconiq-favicon.png",
+    apple: "/arconiq-favicon.png",
   },
 }
 

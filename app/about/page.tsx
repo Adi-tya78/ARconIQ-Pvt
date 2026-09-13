@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { SmoothScroll } from "@/components/smooth-scroll"
-import { ArrowRight, Linkedin, Twitter, Mail, Target, Lightbulb, Users, TrendingUp, Globe, X } from "lucide-react"
+import { ArrowRight, Linkedin, Instagram, Mail, Target, Lightbulb, Users, TrendingUp, Globe, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
@@ -462,10 +462,13 @@ export default function AboutPage() {
                         <Linkedin className="w-5 h-5 text-zinc-400 group-hover:text-cyan-400 transition-colors" />
                       </a>
                       <a
-                        href="#"
+                        href="https://instagram.com/arconiqs"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="ARconIQ Solutions on Instagram"
                         className="w-10 h-10 rounded-full bg-zinc-800 hover:bg-cyan-500/20 flex items-center justify-center transition-colors group"
                       >
-                        <Twitter className="w-5 h-5 text-zinc-400 group-hover:text-cyan-400 transition-colors" />
+                        <Instagram className="w-5 h-5 text-zinc-400 group-hover:text-cyan-400 transition-colors" />
                       </a>
                       <a
                         href="#"

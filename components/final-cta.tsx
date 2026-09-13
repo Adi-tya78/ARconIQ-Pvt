@@ -116,11 +116,11 @@ export function FinalCTA() {
           {/* Contact info */}
           <div className="mt-8 pt-8 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-center gap-6">
             <a
-              href="mailto:hello@arconiq.com"
+              href="mailto:founders@arconiqs.co.in"
               className="flex items-center gap-2 text-zinc-400 hover:text-cyan-400 transition-colors"
             >
               <Mail className="w-4 h-4" />
-              <span className="text-sm">hello@arconiq.com</span>
+              <span className="text-sm">founders@arconiqs.co.in</span>
             </a>
             <a
               href="tel:+1234567890"

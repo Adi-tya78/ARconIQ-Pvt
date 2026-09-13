@@ -15,6 +15,7 @@ const teamMembers = [
   {
     name: "Aditya Yadav",
     role: "CEO & Co-Founder",
+    linkedin: "https://linkedin.com/in/itselfadii",
     bio: "With extensive corporate experience in outsourcing business operations, Aditya brings a unique blend of strategic vision and hands-on expertise. A Bachelor's in Business Administration graduate who chose to step away from his MBA to pursue his vision of creating a value-driven entity. His deep understanding of AI training models, client operations, and the complete product delivery cycle makes him the driving force behind ARconIQ's operational excellence.",
     expertise: ["AI Model Training", "Client Operations", "Product Delivery Cycle", "Business Strategy"],
     education: "BBA | Former MBA Candidate",
@@ -24,6 +25,7 @@ const teamMembers = [
   {
     name: "Raash Gupta",
     role: "CFO & Co-Founder",
+    linkedin: "https://linkedin.com/in/raash-gupta-207016262",
     bio: "Raash holds a Master's degree in Commerce (M.Com) and brings a deep understanding of core financial concepts and strategic financial planning to ARconIQ. His expertise in financial management, budgeting, and fiscal strategy ensures that every client engagement is backed by sound financial principles. As CFO, he oversees the financial health of both ARconIQ and the financial consulting services offered to clients.",
     expertise: ["Financial Strategy", "Corporate Finance", "Budget Management", "Financial Analysis"],
     education: "M.Com (Masters in Commerce)",
@@ -301,7 +303,19 @@ export default function AboutPage() {
 
                       {/* Name */}
                       <h3 className="text-lg font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors">
-                        {member.name}
+                        {member.linkedin ? (
+                          <a
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noreferrer"
+                            onClick={(event) => event.stopPropagation()}
+                            className="hover:text-cyan-400 transition-colors"
+                          >
+                            {member.name}
+                          </a>
+                        ) : (
+                          member.name
+                        )}
                       </h3>
 
                       {/* Role */}
